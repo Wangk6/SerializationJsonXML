@@ -23,7 +23,7 @@ using System.Runtime.Serialization;
 
 namespace CourseWork
 {
-    [DataContract]
+    [DataContract(Name = "categories")]
     public class Category
     {
         #region Private Member Variables

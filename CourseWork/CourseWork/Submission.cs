@@ -21,7 +21,7 @@ using System.Runtime.Serialization;
 
 namespace CourseWork
 {
-    [DataContract]
+    [DataContract(Name = "submissions")]
     public class Submission
     {
         #region Private Member Variables
