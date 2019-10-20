@@ -32,12 +32,24 @@ namespace CourseWork
         #endregion
 
         #region Methods
+        //****************************************************************
+        //Name: Category()
+        //Purpose: Default constructor that sets the name and percentage
+        //         variables
+        //Input Type: None
+        //Output Type: None
+        //****************************************************************
         public Category()
         {
             m_Name = "Homework";
             m_Percentage = 35;
         }
-
+        //****************************************************************
+        //Name: ToString()
+        //Purpose: Displays descriptive text of name and percentage
+        //Input Type: None
+        //Output Type: None
+        //****************************************************************
         public override string ToString()
         {
             return "Name: " + Name + " Percentage" + Percentage;
@@ -45,7 +57,7 @@ namespace CourseWork
         #endregion
 
         #region Properties
-        [DataMember(Name="name")]
+        [DataMember(Name = "name")]
         public string Name
         {
             get
@@ -57,7 +69,7 @@ namespace CourseWork
                 m_Name = value;
             }
         }
-        [DataMember(Name="percentage")]
+        [DataMember(Name = "percentage")]
         public double Percentage
         {
             get
@@ -71,6 +83,6 @@ namespace CourseWork
         }
         #endregion
 
-        
+
     }
 }

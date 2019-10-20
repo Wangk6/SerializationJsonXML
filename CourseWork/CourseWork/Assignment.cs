@@ -31,6 +31,13 @@ namespace CourseWork
         #endregion
 
         #region Methods
+        //****************************************************************
+        //Name: Assignment()
+        //Purpose: Default constructor that sets the name, description
+        //         category name
+        //Input Type: None
+        //Output Type: None
+        //****************************************************************
         public Assignment()
         {
             m_Name = "Homework 2";
@@ -38,6 +45,13 @@ namespace CourseWork
             m_CategoryName = "Homework";
         }
 
+        //****************************************************************
+        //Name: ToString()
+        //Purpose: Displays descriptive text of name, description
+        //         category name
+        //Input Type: None
+        //Output Type: None
+        //****************************************************************
         public override string ToString()
         {
             return "Name: " + Name + " Description: " + Description + " Category Name:" + CategoryName;
@@ -45,7 +59,7 @@ namespace CourseWork
         #endregion
 
         #region Properties
-        [DataMember(Name="name")]
+        [DataMember(Name = "name")]
         public string Name
         {
             get
@@ -71,7 +85,7 @@ namespace CourseWork
             }
         }
 
-        [DataMember(Name="categoryName")]
+        [DataMember(Name = "categoryName")]
         public string CategoryName
         {
             get
