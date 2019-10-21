@@ -92,17 +92,17 @@ namespace ConsoleMenu
                             break;
                         case 2:
                             valid = true;
-                            readCategoryXML();
+                            readCourseWorkXML();
                             Console.WriteLine(Environment.NewLine);
                             break;
                         case 3:
                             valid = true;
-                            writeCategoryJSON();
+                            writeCourseWorkJSON();
                             Console.WriteLine(Environment.NewLine);
                             break;
                         case 4:
                             valid = true;
-                            writeCategoryXML();
+                            writeCourseWorkXML();
                             Console.WriteLine(Environment.NewLine);
                             break;
                         case 5:
@@ -112,7 +112,7 @@ namespace ConsoleMenu
                             break;
                         case 6:
                             valid = true;
-                            readCourseWorkJSON();
+                            findSubmission();
                             Console.WriteLine(Environment.NewLine);
                             break;
                         case 7: //Exit case
@@ -230,7 +230,7 @@ namespace ConsoleMenu
         }
 
         //****************************************************************
-        //Name: displaySubmission()
+        //Name: displayCourseWork()
         //Purpose: Displays the current instance of the objects variable values
         //         on screen
         //Input Type: None
@@ -239,6 +239,27 @@ namespace ConsoleMenu
         private void displayCourseWork()
         {
             Console.WriteLine(courseWork);
+        }
+
+        //****************************************************************
+        //Name: findSubmission()
+        //Purpose: Find the submission after reading from file
+        //Input Type: None - User enters assignment name
+        //Output Type: None - Outputs if assignment found
+        //****************************************************************
+        private void findSubmission()
+        {
+            Console.Write("Enter assignment name: ");
+            string name = Console.ReadLine();
+            Submission result = courseWork.Submissions.Find(x => x.AssignmentName == name);
+            if (result != null)
+            {
+                Console.WriteLine(result.CategoryName + ", " + result.AssignmentName + ", " + result.Grade);
+            }
+            else
+            {
+                Console.WriteLine("Assignment not found");
+            }
         }
 
         #endregion
