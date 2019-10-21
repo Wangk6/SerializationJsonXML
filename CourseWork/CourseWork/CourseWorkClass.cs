@@ -22,14 +22,14 @@ using System.Runtime.Serialization;
 
 namespace CourseWork
 {
-    [DataContract(Name ="coursename")]
-    class CourseWork
+    [DataContract]
+    public class CourseWorkClass
     {
         #region Member Variables
         private string m_CourseName;
-        private List<Category> m_Categories;
-        private List<Assignment> m_Assignments;
-        private List<Submission> m_Submissions;
+        private List<Category> m_Categories = new List<Category>();
+        private List<Assignment> m_Assignments = new List<Assignment>();
+        private List<Submission> m_Submissions = new List<Submission>();
         #endregion
 
         #region Methods
@@ -40,7 +40,7 @@ namespace CourseWork
         //Input Type: None
         //Output Type: None
         //****************************************************************
-        public CourseWork()
+        public CourseWorkClass()
         {
             m_CourseName = "Test Course Name";
             m_Categories.Add(new Category { Name = "Test Category Name", Percentage = 50.0 });
@@ -100,10 +100,7 @@ namespace CourseWork
             //list or dynamic array
 
             //Check to see if our harded category can be used
-            if (Categories.Count == 4 && Categories.Find(x=> x.Name == "Exams").ToString() == "Exams"
-                && Categories.Find(x => x.Name == "Homework").ToString() == "Homework"
-                && Categories.Find(x => x.Name == "Quizzes").ToString() == "Quizzes"
-                && Categories.Find(x => x.Name == "Labs").ToString() == "Labs")
+            if (Categories.Count == 4)
             {
                 //Run through the assignments
                 foreach (Submission j in Submissions)
@@ -154,23 +151,23 @@ namespace CourseWork
 
                 //Calculate the grades with the weight
                 //Exam
-                exm.grade = (exm.grade/exm.numOfGrades) * exm.gradeWeight;
+                exm.grade = ((exm.grade/exm.numOfGrades) / 100) * exm.gradeWeight;
                 //Homework
-                hwk.grade = (hwk.grade/ hwk.numOfGrades) * hwk.gradeWeight;
+                hwk.grade = ((hwk.grade/ hwk.numOfGrades) / 100) * hwk.gradeWeight;
                 //Quiz
-                qz.grade = (qz.grade/exm.numOfGrades) * qz.gradeWeight;
+                qz.grade = ((qz.grade/exm.numOfGrades) / 100) * qz.gradeWeight;
                 //Labs
-                lb.grade = (lb.grade / lb.numOfGrades) * lb.gradeWeight;
+                lb.grade = ((lb.grade / lb.numOfGrades) / 100) * lb.gradeWeight;
 
                 //Add to overall grade
                 overallGrade = exm.grade + hwk.grade + qz.grade + lb.grade;
             }
-            else //Can't be used
+            else //Show that the preset names can't be used
             {
                 overallGrade = -1;
             }
 
-            return overallGrade;
+            return Math.Round(overallGrade, 2);
         }
 
         //****************************************************************
@@ -181,18 +178,41 @@ namespace CourseWork
         //****************************************************************
         public override string ToString()
         {
-            return "CourseName: " + CourseName + " Assignment: " + Assignments + " Category: " + Categories + " Submission: " + Submissions;
+            string retVal = string.Empty;
+
+            retVal += CourseName + Environment.NewLine;
+
+            foreach (Category x in Categories)
+            {
+                retVal += x.Name + ", " + x.Percentage + Environment.NewLine;
+            }
+
+            foreach (Assignment x in Assignments)
+            {
+                retVal += x.Name + ", " + x.Description + ", " + x.CategoryName + Environment.NewLine;
+            }
+
+            foreach (Submission x in Submissions)
+            {
+                retVal += x.AssignmentName + ", " + x.CategoryName + ", " + x.Grade + Environment.NewLine;
+            }
+
+            retVal += "Overall GPA: " + CalculateGrade() + Environment.NewLine;
+            return retVal;
         }
         #endregion
 
         #region Properties
-        [DataMember]
+        [DataMember(Name ="coursename")]
         public string CourseName { get { return m_CourseName; } set { m_CourseName = value; } }
 
+        [DataMember(Name = "categories")]
         public List<Category> Categories { get { return m_Categories; } set { m_Categories = value; } }
 
+        [DataMember(Name = "assignments")]
         public List<Assignment> Assignments { get { return m_Assignments; } set { m_Assignments = value; } }
 
+        [DataMember(Name = "submissions")]
         public List<Submission> Submissions { get { return m_Submissions; } set { m_Submissions = value; } }
         #endregion
     }

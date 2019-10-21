@@ -1,4 +1,3 @@
-C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\obj\Debug\ConsoleMenu.csprojAssemblyReference.cache
 C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\obj\Debug\ConsoleMenu.csproj.CoreCompileInputs.cache
 C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\bin\Debug\ConsoleMenu.exe.config
 C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\bin\Debug\ConsoleMenu.exe
@@ -8,3 +7,4 @@ C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\bin\Debug\CourseW
 C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\obj\Debug\ConsoleMenu.csproj.CopyComplete
 C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\obj\Debug\ConsoleMenu.exe
 C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\obj\Debug\ConsoleMenu.pdb
+C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\obj\Debug\ConsoleMenu.csprojAssemblyReference.cache

@@ -58,7 +58,7 @@ namespace CourseWork
         #endregion
 
         #region Properties
-        [DataMember(Name = "categoryName")]
+        [DataMember(Name = "categoryname")]
         public string CategoryName
         {
             get
@@ -70,7 +70,7 @@ namespace CourseWork
                 m_CategoryName = value;
             }
         }
-        [DataMember(Name = "assignmentName")]
+        [DataMember(Name = "assignmentname")]
         public string AssignmentName
         {
             get
