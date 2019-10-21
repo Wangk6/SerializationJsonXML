@@ -1,5 +1,5 @@
 ﻿//******************************************************
-// File: CourseWork.cs
+// File: CourseWorkClass.cs
 //
 // Purpose: Contains the class definition for CourseWork.
 //          CourseWork will hold all CourseWork information 
