@@ -137,21 +137,21 @@ namespace CourseWork
                 }
 
                 //Find the weight of each category
-                foreach(Category c in Categories)
+                foreach (Category c in Categories)
                 {
-                    if(c.Name == "Exams")
+                    if (c.Name == "Exams")
                     {
                         exm.gradeWeight = c.Percentage;
                     }
-                    else if(c.Name == "Homework")
+                    else if (c.Name == "Homework")
                     {
                         hwk.gradeWeight = c.Percentage;
                     }
-                    else if(c.Name == "Quizzes")
+                    else if (c.Name == "Quizzes")
                     {
                         qz.gradeWeight = c.Percentage;
                     }
-                    else if(c.Name == "Labs")
+                    else if (c.Name == "Labs")
                     {
                         lb.gradeWeight = c.Percentage;
                     }
@@ -159,11 +159,11 @@ namespace CourseWork
 
                 //Calculate the grades with the weight
                 //Exam
-                exm.grade = ((exm.grade/exm.numOfGrades) / 100) * exm.gradeWeight;
+                exm.grade = ((exm.grade / exm.numOfGrades) / 100) * exm.gradeWeight;
                 //Homework
-                hwk.grade = ((hwk.grade/ hwk.numOfGrades) / 100) * hwk.gradeWeight;
+                hwk.grade = ((hwk.grade / hwk.numOfGrades) / 100) * hwk.gradeWeight;
                 //Quiz
-                qz.grade = ((qz.grade/exm.numOfGrades) / 100) * qz.gradeWeight;
+                qz.grade = ((qz.grade / exm.numOfGrades) / 100) * qz.gradeWeight;
                 //Labs
                 lb.grade = ((lb.grade / lb.numOfGrades) / 100) * lb.gradeWeight;
 
