@@ -49,6 +49,7 @@ namespace CourseWork
         }
 
         //***************************************************************
+        //Name: FindSubmission()
         //Purpose: This method takes the assignment name as a parameter.It should 
         //         return the Submission with the given assignment name.If it is 
         //         not found then return null.
@@ -69,6 +70,13 @@ namespace CourseWork
             public double gradeWeight;
         }
 
+        //***************************************************************
+        //Name: CalculateGrade()
+        //Purpose: This method takes the overall category grades and calculates
+        //         the grade 
+        //Input Type: None
+        //Output Type: double - Overall Grade Point Average
+        //***************************************************************
         public double CalculateGrade()
         {
             //Final grade score
