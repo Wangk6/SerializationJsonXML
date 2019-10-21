@@ -116,7 +116,7 @@ namespace ConsoleMenu
                             Console.WriteLine(Environment.NewLine);
                             break;
                         case 7: //Exit case
-                            valid = false;
+                            valid = true;
                             break;
                         default:
                             Console.WriteLine("Invalid Input");
