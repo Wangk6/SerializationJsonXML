@@ -85,7 +85,7 @@ namespace CourseWork
             }
         }
 
-        [DataMember(Name = "categoryName")]
+        [DataMember(Name = "categoryname")]
         public string CategoryName
         {
             get

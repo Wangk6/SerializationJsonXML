@@ -7,3 +7,4 @@ C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\obj\Debug\Console
 C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\obj\Debug\ConsoleMenu.csproj.CopyComplete
 C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\obj\Debug\ConsoleMenu.exe
 C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\obj\Debug\ConsoleMenu.pdb
+C:\Users\mcdar\source\repos\CourseWork\ConsoleMenu\ConsoleMenu\bin\Debug\CourseWork.pdb
