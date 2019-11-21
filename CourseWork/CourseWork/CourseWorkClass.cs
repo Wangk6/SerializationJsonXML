@@ -163,7 +163,7 @@ namespace CourseWork
                 //Homework
                 hwk.grade = ((hwk.grade / hwk.numOfGrades) / 100) * hwk.gradeWeight;
                 //Quiz
-                qz.grade = ((qz.grade / exm.numOfGrades) / 100) * qz.gradeWeight;
+                qz.grade = ((qz.grade / qz.numOfGrades) / 100) * qz.gradeWeight;
                 //Labs
                 lb.grade = ((lb.grade / lb.numOfGrades) / 100) * lb.gradeWeight;
 
